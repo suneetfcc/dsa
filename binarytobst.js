@@ -8,7 +8,7 @@ class treenode {
 }
 
 
-function postOrder(root, result="") {
+function postOrder(root) {
     if (root !== null) {
         return postOrder(root.left) +
             postOrder(root.right) +
@@ -16,7 +16,7 @@ function postOrder(root, result="") {
     } else return "";
 }
 
-function inOrder(root, result="") {
+function inOrder(root) {
     if (root !== null) {
         return inOrder(root.right) +
             `${root.id}(${root.amount}) ` +
